@@ -17,7 +17,10 @@ def subtract(x, y):
 def multiply(x, y):
     return x * y
 def divide(x, y):
-    return x / y
+    try:
+        return x / y
+    except ZeroDivisionError:
+        print("Error! Can't divide by 0")
 
 if (func == 'add'):
     print(add(x, y))
