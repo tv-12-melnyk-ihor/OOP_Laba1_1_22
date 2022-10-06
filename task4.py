@@ -22,4 +22,10 @@ def maxweight(capacity, weights, bars_number):
                 table[i][j] = table[i-1][j]
     return table[i][j]
 
+#Перевірка правильності вводу кількості та ваги золотих слитків
+if (bars_number != len(weights)):
+    raise Exception("Error! Entered number of bars is incorrect")
+for bar in weights:
+    if (bar <= 0):
+        raise Exception("Error! Bar weight cannot be 0 or less")
 print(maxweight(capacity, weights, bars_number))
