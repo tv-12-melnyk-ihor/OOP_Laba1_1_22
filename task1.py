@@ -18,7 +18,10 @@ elif op == '-':
 elif op == '*':
     result = x * y
 elif op == '/':
-    result = x / y
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("Error! Can't divide by 0")
 else:
     print("Error! Invalid command")
 
